@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="PRODIGY_WD_04.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2 class="logo">MyPortfolio</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="home">
+    <img src="profile.jpg" alt="Profile Photo">
+    <h1>Crafting Modern & Responsive Web Experiences</h1>
+    <p>I am a Web Developer passionate about building clean and interactive websites.</p>
+    <button onclick="scrollToSection('projects')">View Projects</button>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am an IT Engineering student and aspiring web developer with hands-on experience
+        in creating responsive and user-friendly web applications.
+    </p>
+    <p>
+        <strong>Education:</strong> B.E. IT – Savitribai Phule Pune University (SPPU)
+    </p>
+    <p>
+        <strong>Experience:</strong> Academic & personal projects using HTML, CSS, and JavaScript.
+    </p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>Git & GitHub</span>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <h3>Tic Tac Toe Game</h3>
+        <p>Interactive game built using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project-card">
+        <h3>Stopwatch Web App</h3>
+        <p>A simple stopwatch application with start, stop, and reset functionality.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 | Personal Portfolio</p>
+</footer>
+
+<script src="PRODIGY_WD_04.js"></script>
+</body>
+</html>

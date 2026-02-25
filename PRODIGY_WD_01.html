@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 200vh; /* To enable scrolling */
+            background: #f4f6f9;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        /* Logo */
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Menu */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover Effect */
+        nav ul li a:hover {
+            background: white;
+            color: #1e3c72;
+        }
+
+        /* Scroll Effect */
+        nav.scrolled {
+            background: #0f172a;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Page Content */
+        .content {
+            margin-top: 100px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+        <div class="logo">ProDigy Infotech</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>Interactive Navigation Menu</h1>
+        <p>
+            Scroll the page to see the navigation bar change its style.
+            Hover over menu items to see interactive color effects.
+        </p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+</html>
